@@ -31,15 +31,18 @@ while loop:
         if event.type == pygame.QUIT:
             loop = False
     key_pressed = pygame.key.get_pressed()
-    print(key_pressed)
     #player 1 move
     if key_pressed[pygame.K_UP]:
+        print(key_pressed)
         player_one.y -= 3
     if key_pressed[pygame.K_DOWN]:
+        print(key_pressed)
         player_one.y += 3
     if key_pressed[pygame.K_LEFT]:
+        print(key_pressed)
         player_one.x -= 3
     if key_pressed[pygame.K_RIGHT]:
+        print(key_pressed)
         player_one.x += 3
     #player 2 move
     # if key_pressed[pygame.K_w]:
