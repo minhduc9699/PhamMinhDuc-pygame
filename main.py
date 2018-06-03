@@ -10,7 +10,7 @@ BG_COLOR = (255, 255, 0)
 pygame.init()
 
 # 2. Game window & canvas
-SIZE = (600, 800)
+SIZE = (0, 0)
 canvas = pygame.display.set_mode(SIZE)
 
 # 3. Clock
@@ -18,6 +18,7 @@ clock = pygame.time.Clock()
 
 
 input_manager = InputManager()
+
 player = Player(10, 300, input_manager)
 enemy = Enemy(200, 80)
 
