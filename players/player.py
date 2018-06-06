@@ -9,6 +9,8 @@ class Player(GameObjects):
         GameObjects.__init__(self, x, y)
         self.image = pygame.image.load('images/player/player1.png')
         self.input_manager = input_manager
+        self.last_shot = pygame.time.get_ticks()
+        self.cooldown = 200
 
     def update(self):
         if self.input_manager.right_pressed:
@@ -21,7 +23,10 @@ class Player(GameObjects):
             self.y += 10
 
         if self.input_manager.x_pressed:
-            recycle(Bullet, self.x, self.y - 25)
+            now = pygame.time.get_ticks()
+            if now - self.last_shot >= self.cooldown:
+                self.last_shot = now
+                recycle(Bullet, self.x, self.y - 25)
 
 
 
