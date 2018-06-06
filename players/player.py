@@ -21,8 +21,8 @@ class Player(GameObjects):
             self.y += 10
 
         if self.input_manager.x_pressed:
-
             recycle(Bullet, self.x, self.y - 25)
+
 
 
 
